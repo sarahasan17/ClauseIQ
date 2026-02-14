@@ -1,0 +1,7 @@
+<!-- Display Box (Shown Only If Text Exists) -->
+<div *ngIf="outputText" class="reply shadow-sm  ">
+  <div class="c-body">
+    <h4> Simplification:</h4>
+    <div id="simplifier-output" [innerHTML]="outputText"></div>  
+  </div>
+</div>

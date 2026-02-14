@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <h4>Enter Legal text to simplify:</h4>
+
+  <!-- Input Field -->
+  <div class="input-group mb-3">
+    <textarea
+      [(ngModel)]="userInput"
+      #inputArea
+      class="form-control auto-resize"
+      placeholder="Type something..."
+      [disabled]="isLoading"
+      rows="2"
+    ></textarea>
+    <button
+      class="btn btn-primary"
+      (click)="submitText()"
+      [disabled]="isLoading"
+    >
+      <span
+        *ngIf="isLoading"
+        class="spinner-border spinner-border-sm"
+        role="status"
+      ></span>
+      <span *ngIf="!isLoading">Submit</span>
+    </button>
+  </div>
+
+  <!-- Loader -->
+  <div *ngIf="isLoading" class="text-center mt-2">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p>Processing, please wait...</p>
+  </div>
+</div>

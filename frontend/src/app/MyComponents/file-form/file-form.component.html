@@ -1,0 +1,17 @@
+<!-- This is the form for selecting the pdf file
+  We'll select this file, then get a viewer to see it and convert it into text form and store it-->
+
+<div>
+  <div class="mb-3 row d-flex">
+    <div class="col form">
+      <label for="formFile" class="form-label">Please select your file:</label>
+      <input
+        type="file"
+        class="form-control"
+        (change)="onFileSelected($event)"
+        accept="application/pdf"
+      />
+      <p *ngIf="fileName" class="mt-2">Selected File: {{ fileName }}</p>
+    </div>
+  </div>
+</div>

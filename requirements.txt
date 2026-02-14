@@ -1,0 +1,11 @@
+streamlit
+torch
+numpy
+transformers
+langchain_groq
+python-dotenv
+llama_parse
+langchain
+llama_index
+python-multipart
+

@@ -1,0 +1,48 @@
+<!--
+  <div class="card p-3 mt-3 shadow-sm">
+    <h3>Summary</h3>
+    <div
+    *ngIf="extractedText; else noText"
+    [innerHTML]="extractedText"
+    class="text-body"
+    ></div>
+    
+    <ng-template #noText>
+      <p class="text-muted">Please upload a PDF.</p>
+    </ng-template>
+  </div>
+  -->
+
+<div class="accordion mt-3" id="summaryAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#summaryContent"
+        aria-expanded="true"
+        aria-controls="summaryContent"
+      >
+        Summary
+      </button>
+    </h2>
+    <div
+      id="summaryContent"
+      class="accordion-collapse collapse show"
+      data-bs-parent="#summaryAccordion"
+    >
+      <div class="accordion-body">
+        <div
+          *ngIf="extractedText; else noText"
+          [innerHTML]="extractedText"
+          class="text-body"
+        ></div>
+
+        <ng-template #noText>
+          <p class="text-muted">Please upload a PDF.</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

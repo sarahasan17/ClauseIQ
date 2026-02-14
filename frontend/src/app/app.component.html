@@ -1,0 +1,62 @@
+<!-- Workflow 
+ 1. get all dependencies from cwh
+ 2. these modules are to be made
+ document upload
+ document display
+ summarization
+ simplified op
+ -->
+
+<div>
+  <!-- Navbar-->
+  <app-navbar></app-navbar>
+
+  <!-- Rest of the components-->
+  <div class="container body">
+    <h1 class="text-center">Legal Document Simplifier</h1>
+
+    <!-- PDF File selector-->
+    <app-file-form (fileSelected)="onFileSelected($event)"></app-file-form>
+
+    <!-- Loader -->
+    <div *ngIf="isLoading" class="text-center mt-3">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Uploading and processing file...</span>
+      </div>
+      <p>Processing, please wait...</p>
+    </div>
+    <!-- Summarizer -->
+    <app-summarizer
+      [extractedText]="extractedText"
+      *ngIf="isDivVisible"
+    ></app-summarizer>
+
+    <app-simplifier
+      (inputSubmitted)="handleInput($event)"
+      *ngIf="isDivVisible"
+    ></app-simplifier>
+
+    <!-- PDF Preview -->
+    <div class="container text-center" *ngIf="isDivVisible">
+      <div class="row d-flex">
+        <div class="col bigger">
+          <div class="Preview">
+            <div *ngIf="pdfURL; else elseBlock" class="mt-4">
+              <h4>Preview:</h4>
+              <iframe [src]="pdfURL" width="100%"></iframe>
+            </div>
+            <ng-template #elseBlock>
+              <p>Your file will be displayed here</p>
+            </ng-template>
+          </div>
+        </div>
+        <div class="col smaller">
+          <app-simplifier-reply
+            [outputText]="replyText"
+            class="simplifier-scrollable"
+          ></app-simplifier-reply>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

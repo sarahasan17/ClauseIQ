@@ -1,0 +1,13 @@
+.navbar{
+    background-color: #d71e28 !important;
+    border-bottom: 5px solid rgb(255, 205, 65);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    padding-block: 16px;
+}
+h4{
+    color: white !important;
+    font-family: "Claredon", serif !important;
+    font-size: xx-large;
+    padding-top: 0.5%;
+}
