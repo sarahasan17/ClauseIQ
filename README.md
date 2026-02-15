@@ -1,4 +1,4 @@
-# Legal Document implifier
+# ClauseIQ
 
 ## Overview:
 The Legal Document Simplifier is a Generative AI web-based application that simplifies complex legal documents into structured, easy-to-understand summaries. It processes entire contracts or selected sections to extract important legal terms, define them clearly, and generate concise summaries for better readability.
@@ -10,6 +10,9 @@ The system is built using:
 **FastAPI** – backend API framework
 
 **AngularJS** – frontend user interface
+
+## Video Demo
+https://drive.google.com/file/d/1UP2S99LzAd-3ySoBEsIqriUnr02E2q2i/view?usp=sharing
 
 ## Setup Instructions
 
