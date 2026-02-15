@@ -1,9 +1,9 @@
-# Legal DocSument implifier
+# Legal Document implifier
 
 ## Overview:
-The Legal Document Simplifier is a web-based application that simplifies complex legal documents into structured, easy-to-understand summaries. It processes entire contracts or selected sections to extract important legal terms, define them clearly, and generate concise summaries for better readability.
+The Legal Document Simplifier is a Generative AI web-based application that simplifies complex legal documents into structured, easy-to-understand summaries. It processes entire contracts or selected sections to extract important legal terms, define them clearly, and generate concise summaries for better readability.
 The system is built using:
-**LLaMA** – for contextual summarization and plain-language rewriting
+**LLaMA 3.3** – for contextual summarization and plain-language rewriting
 
 **Legal-BERT** – for legal-domain keyword extraction and clause understanding
 
